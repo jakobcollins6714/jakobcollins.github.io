@@ -38,8 +38,8 @@
 
     // example:
     createPlatform(400, 350); //top platform
-    createPlatform(250, 590, 0.5); //,middle platform
-    createPlatform(500, 550, 0.5); // right platform
+    createPlatform(250, 590, 0.5); //middle platform
+    createPlatform(500, 550, 0.5); //right platform
     createPlatform(110, 460, 0.5); //left platform
     createPlatform(110, 250, 0.5); //top left
     // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
