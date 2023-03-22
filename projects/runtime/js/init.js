@@ -72,7 +72,7 @@ var init = function (window) {
     }
     
     // TODO 1 : add a heads-up display to game
-    var hud - opspark.makeHud(); // calling the makehud function and storing it in the hud var
+    var hud = opspark.makeHud(); // calling the makehud function and storing it in the hud var
     view.addchild(hud);
     window.hud = hud;// assign our var hud to the window
    
