@@ -36,15 +36,15 @@ var background = function (window) {
             // TODO: 2 - Part 2
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'lightblue');
+            var backgroundFill = draw.rect(canvasWidth,groundY,'black');
             background.addChild(backgroundFill);
             
             // TODO: 3 - Add a moon and starfield
-            var moon = draw.bitmap("img/moon.png");
-            moon.x =canvasWidth - 200;
+            var moon = draw.bitmap("img/flameball.png");
+            moon.x =canvasWidth - 400;
             moon.y = groundY - 480;
-            moon.scaleX = 0.5;
-            moon.scaleY = 0.5;
+            moon.scaleX = 1.0;
+            moon.scaleY = 1.0;
             background.addChild(moon);
             
             for (var i = 0; i<100; i++){
@@ -64,9 +64,11 @@ var background = function (window) {
             }
             
             // TODO 4: Part 1 - Add a tree
-            tree = draw.bitmap("img/tree.png");
+            tree = draw.bitmap("img/scarytree.png");
             tree.x = canvasHeight - 250;
-            tree.y = groundY - 240;
+            tree.y = groundY - 290;
+            tree.scaleX = 0.2;
+            tree.scaleY = 0.2;
             background.addChild(tree);
             
         } // end of render function - DO NOT DELETE
@@ -81,7 +83,11 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 4: Part 2 - Move the tree!
-            
+            tree.x = tree.x -1;
+
+            if (tree.x < -200){
+                tree.x = canvasWidth;
+                        }
             
             // TODO 5: Part 2 - Parallax
             for (var i = 0; i < buildings.length; i++){

@@ -105,7 +105,7 @@
         
         p.jumpfly = function() {
             setAsset(_jumpfly);
-            tweenHitForAction(_jumpfly.y + halle.y, null, 150, 150, 600);
+            tweenHitForAction(_jumpfly.y + halle.y, null, 250, 250, 600);
         };
         
         p.run = function() {
