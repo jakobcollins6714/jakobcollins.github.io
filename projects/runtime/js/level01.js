@@ -34,12 +34,19 @@ var level01 = function (window) {
                 { "type": "enemy", "x": 650, "y": groundY - 50},
                 { "type": "enemy", "x": 1000, "y": groundY - 50},
                 { "type": "enemy", "x": 1500, "y": groundY - 50},
-                { "type": "enemy", "x": 2000, "y": groundY - 50},
+                { "type": "enemy", "x": 3000, "y": groundY - 50},
+                { "type": "enemy", "x": 3110, "y": groundY - 50},
+                { "type": "enemy", "x": 3200, "y": groundY - 50},
+                { "type": "enemy", "x": 3300, "y": groundY - 50},
+                { "type": "enemy", "x": 3400, "y": groundY - 50},
 
                 { "type": "reward", "x": 400, "y": groundY - 100},
                 { "type": "reward", "x": 600, "y": groundY - 100},
                 { "type": "reward", "x": 800, "y": groundY - 100},
                 { "type": "reward", "x": 1000, "y": groundY - 100},
+                { "type": "reward", "x": 1150, "y": groundY - 100},
+                { "type": "reward", "x": 1350, "y": groundY - 100},
+                { "type": "reward", "x": 1450, "y": groundY - 100},
 
             ]
         };

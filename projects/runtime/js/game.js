@@ -7,7 +7,7 @@
 
     window.opspark.createGameManager = function(app,hud) {
         var score = 0;
-        var health = 100;
+        var health = 120;
         var view = app.view;
         var space = app.space;
 
@@ -38,7 +38,7 @@
            then hallie dies and the game ends
          */
         function changeIntegrity(amount) {
-            health = Math.min(health + amount, 100);
+            health = Math.min(health + amount, 120);
             console.log("setting integrity = ",health);
             hud.setIntegrity(health);
             if(health <= 0) {
@@ -149,7 +149,7 @@
                duration is in milliseconds 
             */
             body.flyTo = function(x,y,duration) {
-                duration = duration || 100;
+                duration = duration || 500;
                 removeFromSpace(body);
                 createjs.Tween.get(body).to({x:x,y:y}, duration).call(function() {
                     removeGameItem(body);
