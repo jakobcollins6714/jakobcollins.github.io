@@ -58,57 +58,57 @@ var level01 = function (window) {
         // BEGIN EDITING YOUR CODE HERE
         
         function createSawBlade(x, y){
-            var hitZoneSize = 25;
-            var damageFromObstacle = 10;
-            var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-            sawBladeHitZone.x = x;
-            sawBladeHitZone.y = y;
-            game.addGameItem(sawBladeHitZone);
-            var obstacleImage = draw.bitmap("img/sawblade.png");
-            sawBladeHitZone.addChild(obstacleImage);
-            obstacleImage.x = -25;
-            obstacleImage.y = -25;
+            var hitZoneSize = 25; //hit zone size of saw blade
+            var damageFromObstacle = 10; // dammage of the sawblade
+            var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle); //creation of the hit zone
+            sawBladeHitZone.x = x; //x of the saw blade
+            sawBladeHitZone.y = y; //y of the saw blade
+            game.addGameItem(sawBladeHitZone); // game add saw blade
+            var obstacleImage = draw.bitmap("img/sawblade.png"); // saw blade logo or picture
+            sawBladeHitZone.addChild(obstacleImage); // hit zone of the saw blade immage
+            obstacleImage.x = -25; //placment of the saw blade
+            obstacleImage.y = -25; // placment of the saw blade
            
         }
 
        
 
         
-        function createEnemy(x, y){
-            var enemy = game.createGameItem("enemy", 25); 
-            var redSquare = draw.rect(50, 50, "red");
-             redSquare.x = -25;
-           redSquare.y = -25;
-           enemy.addChild(redSquare);
-           enemy.x = x;
-           enemy.y = y;
-           game.addGameItem(enemy);
-           enemy.velocityX = -2;
+        function createEnemy(x, y){ // creation of the enemy
+            var enemy = game.createGameItem("enemy", 25);  // variable of the enemy
+            var redSquare = draw.rect(50, 50, "red"); // color of the enemy object
+             redSquare.x = -25; // enemy object placment
+           redSquare.y = -25; // enemy object placment
+           enemy.addChild(redSquare); // game add enemy red square
+           enemy.x = x; // enemy x
+           enemy.y = y; // enemy y
+           game.addGameItem(enemy);// game add item enemy
+           enemy.velocityX = -2; // velocity of the enemy object
    
    
    
-           enemy.onPlayerCollision = function (){
-               game.changeIntegrity(-10);
+           enemy.onPlayerCollision = function (){ // enemy player collision
+               game.changeIntegrity(-10); // integrity change for enemy
    
            }
-           enemy.onProjectileCollision = function(){
-            game.increaseScore(1000);
-            enemy.flyTo(600, 0);
+           enemy.onProjectileCollision = function(){ // enemy projectile collision
+            game.increaseScore(1000); // score increase for game
+            enemy.flyTo(600, 0); // enemy fly control x, y
             }
         }
        
         
 
-        function createReward(x, y){
-            var reward = game.createGameItem("reward", 25);
-            var gameItem = draw.rect(50, 50, "blue");
-            gameItem.x = -25;
-            gameItem.y = -25;
-            reward.addChild(gameItem);
-            reward.x = x;
-            reward.y = y;
-            game.addGameItem(reward);
-            reward.velocityX = -2;
+        function createReward(x, y){ // game create reward
+            var reward = game.createGameItem("reward", 25); // game creation variable for reward
+            var gameItem = draw.rect(50, 50, "gold"); // game reward color and shape
+            gameItem.x = -25; // game reward position
+            gameItem.y = -25; // game reward position
+            reward.addChild(gameItem); // reward game child add
+            reward.x = x; // reward x
+            reward.y = y; // reward y
+            game.addGameItem(reward); // game add item reward
+            reward.velocityX = -2; // the velocity of the reward
             reward.onPlayerCollision = function (){
                 game.changeIntegrity(-10);
                 reward.flyTo(600, 0);
