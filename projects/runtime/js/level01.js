@@ -16,18 +16,25 @@ var level01 = function (window) {
             "number": 1, 
             "speed": -3,
             "gameItems": [
-                { "type": "sawblade", "x": 400, "y": groundY - 110},
+                { "type": "sawblade", "x": 400, "y": groundY - 120},
                 { "type": "sawblade", "x": 600, "y": groundY - 1},
-                { "type": "sawblade", "x": 900, "y": groundY - 110},
-                { "type": "sawblade", "x": 1000, "y": groundY - 110},
+                { "type": "sawblade", "x": 900, "y": groundY - 120},
+                { "type": "sawblade", "x": 1000, "y": groundY - 120},
                 { "type": "sawblade", "x": 1200, "y": groundY - 1},
-                { "type": "sawblade", "x": 1350, "y": groundY - 110},
+                { "type": "sawblade", "x": 1350, "y": groundY - 120},
                 { "type": "sawblade", "x": 1500, "y": groundY - 1},
-                { "type": "sawblade", "x": 1650, "y": groundY - 110},
+                { "type": "sawblade", "x": 1650, "y": groundY - 120},
                 { "type": "sawblade", "x": 1850, "y": groundY - 1},
-                { "type": "sawblade", "x": 2050, "y": groundY - 110},
+                { "type": "sawblade", "x": 2050, "y": groundY - 120},
                 { "type": "sawblade", "x": 2350, "y": groundY - 1},
-                { "type": "sawblade", "x": 2550, "y": groundY - 110},
+                { "type": "sawblade", "x": 2650, "y": groundY - 120},
+                { "type": "sawblade", "x": 2750, "y": groundY - 120},
+                { "type": "sawblade", "x": 2850, "y": groundY - 120},
+                { "type": "sawblade", "x": 2950, "y": groundY - 140},
+                { "type": "sawblade", "x": 3150, "y": groundY - 140},
+                { "type": "sawblade", "x": 3250, "y": groundY - 120},
+                { "type": "sawblade", "x": 3350, "y": groundY - 120},
+
 
 
 
@@ -76,15 +83,16 @@ var level01 = function (window) {
         
         function createEnemy(x, y){ // creation of the enemy
             var enemy = game.createGameItem("enemy", 25);  // variable of the enemy
-            var redSquare = draw.rect(50, 50, "red"); // color of the enemy object
-             redSquare.x = -25; // enemy object placment
-           redSquare.y = -25; // enemy object placment
+            var redSquare = draw.bitmap("img/joe1.png"); // color of the enemy object
+             redSquare.x = -30; // enemy object placment
+           redSquare.y = -30; // enemy object placment
            enemy.addChild(redSquare); // game add enemy red square
            enemy.x = x; // enemy x
            enemy.y = y; // enemy y
            game.addGameItem(enemy);// game add item enemy
            enemy.velocityX = -2; // velocity of the enemy object
-   
+           redSquare.scaleX = 0.15;
+           redSquare.scaleY = 0.15;
    
    
            enemy.onPlayerCollision = function (){ // enemy player collision
@@ -101,14 +109,17 @@ var level01 = function (window) {
 
         function createReward(x, y){ // game create reward
             var reward = game.createGameItem("reward", 25); // game creation variable for reward
-            var gameItem = draw.rect(50, 50, "gold"); // game reward color and shape
-            gameItem.x = -25; // game reward position
-            gameItem.y = -25; // game reward position
+            var gameItem = draw.bitmap("img/burger1.png"); // game reward color and shape
+            gameItem.x = -30; // game reward position
+            gameItem.y = -30; // game reward position
             reward.addChild(gameItem); // reward game child add
             reward.x = x; // reward x
             reward.y = y; // reward y
             game.addGameItem(reward); // game add item reward
             reward.velocityX = -2; // the velocity of the reward
+          gameItem.scaleX = 0.09;
+          gameItem.scaleY = 0.09;
+          
             reward.onPlayerCollision = function (){
                 game.changeIntegrity(-10);
                 reward.flyTo(600, 0);
