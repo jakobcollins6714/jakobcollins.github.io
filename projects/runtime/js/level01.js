@@ -16,24 +16,24 @@ var level01 = function (window) {
             "number": 1, 
             "speed": -3,
             "gameItems": [
-                { "type": "sawblade", "x": 400, "y": groundY - 120},
-                { "type": "sawblade", "x": 600, "y": groundY - 1},
-                { "type": "sawblade", "x": 900, "y": groundY - 120},
-                { "type": "sawblade", "x": 1000, "y": groundY - 120},
-                { "type": "sawblade", "x": 1200, "y": groundY - 1},
-                { "type": "sawblade", "x": 1350, "y": groundY - 120},
-                { "type": "sawblade", "x": 1500, "y": groundY - 1},
-                { "type": "sawblade", "x": 1650, "y": groundY - 120},
-                { "type": "sawblade", "x": 1850, "y": groundY - 1},
-                { "type": "sawblade", "x": 2050, "y": groundY - 120},
-                { "type": "sawblade", "x": 2350, "y": groundY - 1},
-                { "type": "sawblade", "x": 2650, "y": groundY - 120},
-                { "type": "sawblade", "x": 2750, "y": groundY - 120},
-                { "type": "sawblade", "x": 2850, "y": groundY - 120},
-                { "type": "sawblade", "x": 2950, "y": groundY - 140},
-                { "type": "sawblade", "x": 3150, "y": groundY - 140},
-                { "type": "sawblade", "x": 3250, "y": groundY - 120},
-                { "type": "sawblade", "x": 3350, "y": groundY - 120},
+                { "type": "sawblade", "x": 400, "y": groundY - 130},
+                { "type": "sawblade", "x": 600, "y": groundY - .1},
+                { "type": "sawblade", "x": 900, "y": groundY - 130},
+                { "type": "sawblade", "x": 1000, "y": groundY - 130},
+                { "type": "sawblade", "x": 1200, "y": groundY - .1},
+                { "type": "sawblade", "x": 1350, "y": groundY - 130},
+                { "type": "sawblade", "x": 1500, "y": groundY - .1},
+                { "type": "sawblade", "x": 1650, "y": groundY - 130},
+                { "type": "sawblade", "x": 1850, "y": groundY - .1},
+                { "type": "sawblade", "x": 2050, "y": groundY - 130},
+                { "type": "sawblade", "x": 2350, "y": groundY - .1},
+                { "type": "sawblade", "x": 2650, "y": groundY - 130},
+                { "type": "sawblade", "x": 2750, "y": groundY - 130},
+                { "type": "sawblade", "x": 2850, "y": groundY - 130},
+                { "type": "sawblade", "x": 2950, "y": groundY - 150},
+                { "type": "sawblade", "x": 3150, "y": groundY - 150},
+                { "type": "sawblade", "x": 3250, "y": groundY - 130},
+                { "type": "sawblade", "x": 3350, "y": groundY - 130},
 
 
 
@@ -54,7 +54,7 @@ var level01 = function (window) {
                 { "type": "reward", "x": 1150, "y": groundY - 100},
                 { "type": "reward", "x": 1350, "y": groundY - 100},
                 { "type": "reward", "x": 1450, "y": groundY - 100},
-
+                { "type": "reward", "x": 3020, "y": groundY - 140},
             ]
         };
         window.levelData = levelData;
